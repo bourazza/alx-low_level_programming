@@ -1,0 +1,2 @@
+#!/bin/push
+gcc -S masm=intel $CEFILE
