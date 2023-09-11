@@ -1,36 +1,29 @@
-#include <stdio.h>
+[200~#include <stdio.h>
+
 /**
- * main - prints out all the numbers between 00 and 99
- * with no two digits being the same
- * Return: 0
- */
+ *  * main - prints all possible different combinations of two digits
+ *   * Return: ALways 0 (Success)
+ *    */
 int main(void)
 {
-	int i, j;
+		int n, m;
 
-	for (i = 48; i < 58; i++)
-	{
-		for (j = i; j < 58; j++)
-		{
-			if (i == j)
-			{
-				continue;
-			}
-
-			putchar(i);
-			putchar(j);
-
-			if (i == 56 && j == 57)
-			{
-				break;
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+			for (n = 48; n <= 56; n++)
+					{
+								for (m = 49; m <= 57; m++)
+											{
+															if (m > n)
+																			{
+																								putchar(n);
+																												putchar(m);
+																																if (n != 56 || m != 57)
+																																					{
+																																											putchar(',');
+																																																putchar(' ');
+																																																				}
+																																			}
+																	}
+									}
+				putchar('\n');
+					return (0);
 }
